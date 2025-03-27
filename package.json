@@ -10,7 +10,7 @@
     "prepare": "tsup --format cjs,esm && tsc --emitDeclarationOnly --declaration --outDir types",
     "test": "jest",
     "test-self": "ts-node ./src/test.ts",
-    "build": "yarn build:dist && yarn build:declarations",
+    "build": "pnpm build:dist && pnpm build:declarations",
     "build:dist": "tsup --format cjs,esm",
     "build:declarations": "tsc --emitDeclarationOnly --declaration --outDir types",
     "format": "prettier --write \"**/*.+(ts)\""
