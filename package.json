@@ -7,6 +7,7 @@
   "types": "types/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "prepare": "tsup --format cjs,esm && tsc --emitDeclarationOnly --declaration --outDir types",
     "test": "jest",
     "test-self": "ts-node ./src/test.ts",
     "build": "yarn build:dist && yarn build:declarations",
